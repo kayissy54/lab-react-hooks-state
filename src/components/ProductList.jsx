@@ -21,13 +21,12 @@ const ProductList = ({ products, category, addToCart }) => {
     <div>
       <h2>Available Products</h2>
 
-      {filtered.map(product => (
-        <div key={product.id}>
-          <ProductCard product={product} />
-          <button onClick={() => addToCart(product)}>
-            Add to Cart
-          </button>
-        </div>
+        {filtered.map(product => (
+        <ProductCard
+          key={product.id}
+          product={product}
+          addToCart={addToCart}
+        />
       ))}
     </div>
   )
