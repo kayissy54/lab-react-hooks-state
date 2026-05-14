@@ -18,13 +18,17 @@ const ProductList = ({ products, category, addToCart }) => {
     <div>
       <h2>Available Products</h2>
 
-      {filtered.map(product => (
+          {filtered.length === 0 ? (
+      <p>No products available</p>
+    ) : (
+      filtered.map(product => (
         <ProductCard
           key={product.id}
           product={product}
           addToCart={addToCart}
         />
-      ))}
+      ))
+    )}
     </div>
   )
 }
