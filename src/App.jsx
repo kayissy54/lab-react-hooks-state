@@ -12,11 +12,11 @@ const App = () => {
      const [category, setCategory] = useState('All')
       
      const products = [
-    { id: 1, name: 'Milk', category: 'Dairy' },
-    { id: 2, name: 'Cheese', category: 'Dairy' },
-    { id: 3, name: 'Bread', category: 'Bakery' },
-    { id: 4, name: 'Apple', category: 'Fruits' }
-  ]
+  { id: 1, name: 'Apple', price: '$1.00', category: 'Fruits', inStock: true },
+  { id: 2, name: 'Milk', price: '$2.50', category: 'Dairy', inStock: false },
+  { id: 3, name: 'Bread', price: '$3.00', category: 'Bakery', inStock: true },
+  { id: 4, name: 'Cheese', price: '$4.00', category: 'Dairy', inStock: true }
+]
 
   
   const toggleDarkMode = () => {
